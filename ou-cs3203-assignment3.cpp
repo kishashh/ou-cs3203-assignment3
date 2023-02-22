@@ -19,18 +19,24 @@ int listProduct(int* ptr, int size){//loop to multiply each element to product
 }
 
 int main(){
+    int n;
+    cout << "Enter the how many numbers will be in the list: ";
+    cin >> n;
 
-    int numArray[3];
+    int* numArray = new int[n]; //an array with a size that is determined at runtime
 
-    numArray[0] = 2;
-    numArray[1] = 3;
-    numArray[2] = 4;
+    for (int i = 0; i < n; i++){
+        cout << "Enter the value at " << i << ": ";
+        cin >> numArray[i];
+    }
 
-    int sum = listSum(numArray, sizeof(numArray)/sizeof(int));
+    int sum = listSum(numArray, n);
     cout << "The sum of the array is: " << sum << endl;
     
-    int product = listProduct(numArray, sizeof(numArray)/sizeof(int));
+    int product = listProduct(numArray, n);
     cout << "The product of the array is: " << product << endl;
+
+    delete[] numArray;//free memory
 
     return 0;
 }
