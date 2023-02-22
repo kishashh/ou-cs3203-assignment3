@@ -44,7 +44,16 @@ int main(){
     int product = listProduct(numArray, n);
     cout << "The product of the array is: " << product << endl;
 
+    int* numReverse;
+    numReverse = reverseList(numArray, n);
+    cout << "The reverse of the array:";
+    for (int i = 0; i < n; i++) {
+        cout << " " << numReverse[i];
+    }
+    cout << endl;
+
     delete[] numArray;//free memory
+    delete[] numReverse;
 
     return 0;
 }
