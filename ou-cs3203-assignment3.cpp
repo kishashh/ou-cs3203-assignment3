@@ -18,6 +18,14 @@ int listProduct(int* ptr, int size){//loop to multiply each element to product
     return product;
 }
 
+int* reverseList(int* list, int size){
+    int* listReverse = new int[size];
+    for(int i = 0; i < size; i++){
+        listReverse[i] = list[size - 1 - i]; //size - 1 - (amount of loop iterations)
+    }
+    return listReverse;
+}
+
 int main(){
     int n;
     cout << "Enter the how many numbers will be in the list: ";
