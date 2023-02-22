@@ -54,7 +54,11 @@ int main(){
     numReverse = reverseList(numArray, n);
     cout << "The reverse of the array:";
 
+<<<<<<< Updated upstream
     for (int i = 0; i < n; i++) {//prints reversed array
+=======
+    for (int i = 0; i < n; i++) {//prints reverse of array
+>>>>>>> Stashed changes
         cout << " " << numReverse[i];
     }
 
